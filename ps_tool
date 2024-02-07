@@ -45,7 +45,7 @@ function new_problem() {
 
 	if contains "${LANGUAGE_EXT[@]}" "rs"
 	then
-		cargo new $DIR_NAME
+		cargo new $DIR_NAME --vcs none
 		cp rustfmt.toml ./$DIR_NAME/
 		make_sources ./$DIR_NAME/src/
 		
